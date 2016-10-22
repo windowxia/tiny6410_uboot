@@ -1,0 +1,1 @@
+/opt/share/u-boot-2010.03/cpu/arm1176/start.S

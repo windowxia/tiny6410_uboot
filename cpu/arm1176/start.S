@@ -238,6 +238,8 @@ mmu_enable:
 	mov	pc, r2
 #endif
 
+	ldr r1, =0x0030
+	str r1, [r0, #GPKDAT_OFFSET]
 skip_hw_init:
 	/* Set up the stack						    */
 stack_setup:
@@ -258,11 +260,14 @@ clbss_l:
 	ble	clbss_l
 
 #ifndef CONFIG_NAND_SPL
+	
 	ldr	pc, _start_armboot
 
 _start_armboot:
 	.word start_armboot
 #else
+	ldr r1, =0x0000
+	str r1, [r0, #GPKDAT_OFFSET]
 	b	nand_boot
 /*	.word nand_boot*/
 #endif

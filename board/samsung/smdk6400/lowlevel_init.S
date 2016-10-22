@@ -59,7 +59,7 @@ lowlevel_init:
 	ldr	r1, =0x00005500
 	str	r1, [r0, #GPKPUD_OFFSET]
 
-	ldr	r1, =0x0030
+	ldr	r1, =0x0010
 	str	r1, [r0, #GPKDAT_OFFSET]
 
 	/* Disable Watchdog */
