@@ -1,1 +1,0 @@
-/opt/share/u-boot-2010.03/nand_spl/nand_boot.c
